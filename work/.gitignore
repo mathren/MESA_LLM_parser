@@ -5,3 +5,4 @@
 *.a
 photos/*
 star
+.mesa_tmp_cache
