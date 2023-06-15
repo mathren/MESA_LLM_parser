@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# set number of cores to use
+OMP_NUM_THREADS=4
+
+# compile
+./clean
+./mk
+
+rm -f restart_photo
+
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"
+./star
+date "+DATE: %Y-%m-%d%nTIME: %H:%M:%S"

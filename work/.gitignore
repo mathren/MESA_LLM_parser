@@ -1,0 +1,7 @@
+*.mod
+*.npy
+*.data
+*.o
+*.a
+photos/*
+star
