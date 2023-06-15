@@ -1,0 +1,29 @@
+* MESA_LLM_parser
+
+ Simple parser for tests.
+
+** How to run MESA
+
+ 1. Install it following the [[https://docs.mesastar.org/en/latest/installation.html][instructions in the MESA docs]]
+ 2. modify the paths in =init_MESA.sh= accordingly and run that script
+ 3. go into [[./work]] and run the customized =./rn= script, which will
+    first call =./clean && ./mk= to compile the code and then start
+    the actual run. In =./rn= you can also set =OMP_NUM_THREADS= to
+    select the number of codes
+
+** Configuration file for MESA
+
+   This is =work/inlist= which in this example nests =inlist_project=
+   (where the actual stuff happens), and =inlist_pgstar= (for
+   on-the-fly plots, not needed here). See also [[https://docs.mesastar.org/en/latest/quickstart.html][MESA documentation]].
+
+   Our example is configured to run a 1M_{\odot} star until TAMS.
+
+** Parser
+
+   The parser should be customized for your application. This example
+   checks the final outer radius of the star at the end of the run and
+   returns that number.
+
+   The parser also hardcodes the relative path to the =work= folder
+   right now.
